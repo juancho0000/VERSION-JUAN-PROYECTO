@@ -1,0 +1,39 @@
+body {
+    background-image: linear-gradient(to right top, #02025f, #0e1980, hsl(59, 93%, 62%), hwb(65 6% 1%), #fffb03); /* Fondo con gradiente */
+    color: #fff; /* Color del texto */
+}
+
+.container {
+    background-color: rgba(178, 197, 226, 0.515); /* Fondo semi-transparente del contenedor */
+    border-radius: 10px; /* Esquinas redondeadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    padding: 20px;
+    margin-top: 50px;
+}
+
+.card {
+    background-color: rgba(0, 0, 0, 0.585); /* Fondo semi-transparente de la tarjeta */
+    border: none; /* Sin borde */
+    border-radius: 10px; /* Esquinas redondeadas */
+}
+
+h2 {
+    color: #051937; /* Color del encabezado */
+}
+
+.form-label {
+    color: #051937; /* Color de la etiqueta del formulario */
+}
+
+.btn-primary {
+    background-color: #00bf72; /* Color del botón principal */
+    border: none; /* Sin borde */
+}
+
+.btn-primary:hover {
+    background-color: #008793; /* Color del botón al pasar el ratón */
+}
+
+.btn-center {
+    text-align: center;
+}

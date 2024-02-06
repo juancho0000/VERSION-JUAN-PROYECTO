@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informe de Garantías - Auto Speed Fierro</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333; 
+        }
+
+        h3 {
+            text-align: center;
+            color: #1e409f; 
+        }
+
+        h1 {
+            text-align: center;
+            color: #1e409f; 
+            margin-right: 10px; 
+        }
+
+        .header {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .logo-container {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .logo {
+            width: 50px; 
+            height: auto; 
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #1e409f; 
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1><span class="logo-container"><img class="logo" src="static/iconodon.png" alt="Auto Speed Fierro Logo"></span> Auto Speed Fierro</h1>
+        <h3>Informe-Garantias</h3>
+    </div>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Fecha de <br> Vencimiento</th>
+                <th>Código de  <br> Garantía</th>
+                <th>Detalles de  <br>Garantía</th>
+                <th>Detalles de  <br> Vehículo</th>
+                <th>Estados</th>
+                <th>Producto o Servicio</th> <!-- Agregado -->
+            </tr>
+        </thead>
+        <tbody>
+            {% for garantia in garantias %}
+                <tr>
+                    <td>{{ garantia.id }}</td>
+                    <td>{{ garantia.fecha_vencimiento }}</td>
+                    <td>{{ garantia.codigo_garantia }}</td>
+                    <td>{{ garantia.detalles_garantia }}</td>
+                    <td>{{ garantia.detalles_vehiculo }}</td>
+                    <td>{{ garantia.estados }}</td>
+                    <td>{{ garantia.producto_servicio.nombre}}</td> <!-- Agregado -->
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
+

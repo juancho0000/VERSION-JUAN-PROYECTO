@@ -1,0 +1,10 @@
+{% extends "admin/change_list.html" %}
+
+{% block result_list %}
+  <ul>
+    <li>
+      <a href="{% url 'reporte_garantia_pdf' %}" class="button" target="_blank">Generar Informe PDF</a>
+    </li>
+  </ul>
+  {{ block.super }}
+{% endblock %}
